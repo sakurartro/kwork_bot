@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kwork · Радар заказов</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar__titles">
+        <h1 class="title">Kwork <span class="title__accent">Радар</span></h1>
+        <p class="subtitle">Живой парсинг биржи заказов kwork.ru/projects</p>
+      </div>
+      <div class="topbar__controls">
+        <select id="category-select" class="select" aria-label="Категория заказов">
+          <option value="">Все категории</option>
+        </select>
+        <button id="refresh-btn" class="btn" type="button">Спарсить заказы</button>
+        <span id="status-text" class="status-text">Загрузка…</span>
+      </div>
+    </header>
+
+    <p id="stats-line" class="stats-line"></p>
+
+    <main id="cards" class="cards" aria-live="polite"></main>
+  </div>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="card__badge-new">Новое</div>
+      <h2 class="card__title"></h2>
+      <p class="card__description"></p>
+      <div class="card__meta">
+        <span class="pill card__budget"></span>
+        <span class="pill card__time-left"></span>
+        <span class="pill card__responses"></span>
+      </div>
+      <p class="card__ai-note"></p>
+      <div class="card__footer">
+        <span class="card__author"></span>
+        <a class="card__link" target="_blank" rel="noopener noreferrer">Открыть на Kwork →</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

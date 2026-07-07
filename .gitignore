@@ -1,0 +1,19 @@
+# Secrets & env
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# Data & logs
+data/*.db
+data/*.json
+logs/*.log
+logs/*.out
+
+# IDE
+.vscode/
+.idea/

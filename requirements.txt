@@ -1,0 +1,30 @@
+# Telegram bot framework (async)
+aiogram>=3.4
+
+# HTTP client + HTML parsing
+httpx>=0.27
+selectolax>=0.3
+beautifulsoup4>=4.12
+
+# Local test web server (парсер на localhost, до интеграции в бота)
+fastapi>=0.111
+uvicorn[standard]>=0.30
+
+# Optional: JS-rendering / anti-bot bypass fallback
+# playwright>=1.44
+
+# Gemini API (унифицированный SDK, google-generativeai deprecated с 2025-11-30)
+google-genai>=2.10
+
+# Storage (async SQLite)
+aiosqlite>=0.20
+
+# Config & env
+pydantic-settings>=2.2
+python-dotenv>=1.0
+
+# Scheduling / periodic parsing
+apscheduler>=3.10
+
+# Logging
+loguru>=0.7
